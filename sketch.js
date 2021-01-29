@@ -13,10 +13,11 @@ function setup() {
   database=firebase.database();
   createCanvas(1000,400);
 
-  foodObj = new Food();
 
   foodStock=database.ref('Food');
   foodStock.on("value",readStock);
+    foodObj = new Food();
+
   
   dog=createSprite(800,200,150,150);
   dog.addImage(sadDog);
